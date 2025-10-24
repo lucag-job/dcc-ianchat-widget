@@ -3,32 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DCC Cagent Widget</title>
+  <title>DCC Chat Widget</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9f9f9;
+    }
+
+    #widget-container {
+      width: 400px;
+      height: 600px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: white;
+      position: relative;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Our Support Page</h1>
-  <p>Chat with our agent using the widget below.</p>
-
-  <!-- DCC Cagent Widget Script -->
-  <script
-    id="Microsoft_Omnichannel_LCWidget"
-    src="https://oc-cdn-public-eur.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js"
-    onerror="(function(el){
-      el.parentNode.removeChild(el);
-      var s=document.createElement('script');
-      s.src='https://ocprodpubliceurgs.blob.core.windows.net/livechatwidget/scripts/LiveChatBootstrapper.js';
-      s.setAttribute('id', 'Microsoft_Omnichannel_LCWidget');
-      s.setAttribute('data-app-id', '4439c69f-a39c-4c8a-af62-8d15b8b553cc');
-      s.setAttribute('data-lcw-version', 'prod');
-      s.setAttribute('data-org-id', '58009252-ce93-f011-a6fe-000d3a3a034a');
-      s.setAttribute('data-org-url', 'https://m-58009252-ce93-f011-a6fe-000d3a3a034a.eu.omnichannelengagementhub.com');
-      document.body.appendChild(s);
-    })(this);"
-    data-app-id="4439c69f-a39c-4c8a-af62-8d15b8b553cc"
-    data-lcw-version="prod"
-    data-org-id="58009252-ce93-f011-a6fe-000d3a3a034a"
-    data-org-url="https://m-58009252-ce93-f011-a6fe-000d3a3a034a.eu.omnichannelengagementhub.com"
-    async>
-  </script>
+  <div id="widget-container">
+    <!-- DCC Cagent Widget Script -->
+    <script id="Microsoft_Omnichannel_LCWidget"
+      src="https://oc-cdn-public-eur.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js"
+      onerror="(function(el){
+        el.parentNode.removeChild(el);
+        var s=document.createElement('script');
+        s.src='https://ocprodpubliceurgs.blob.core.windows.net/livechatwidget/scripts/LiveChatBootstrapper.js';
+        s.setAttribute('id', 'Microsoft_Omnichannel_LCWidget');
+        s.setAttribute('data-app-id', '4439c69f-a39c-4c8a-af62-8d15b8b553cc');
+        s.setAttribute('data-lcw-version', 'prod');
+        s.setAttribute('data-org-id', '58009252-ce93-f011-a6fe-000d3a3a034a');
+        s.setAttribute('data-org-url', 'https://m-58009252-ce93-f011-a6fe-000d3a3a034a.eu.omnichannelengagementhub.com');
+        document.body.appendChild(s);
+      })(this);"
+      data-app-id="4439c69f-a39c-4c8a-af62-8d15b8b553cc"
+      data-lcw-version="prod"
+      data-org-id="58009252-ce93-f011-a6fe-000d3a3a034a"
+      data-org-url="https://m-58009252-ce93-f011-a6fe-000d3a3a034a.eu.omnichannelengagementhub.com"
+      async>
+    </script>
+  </div>
 </body>
 </html>
